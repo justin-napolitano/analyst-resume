@@ -3,53 +3,57 @@ slug: "github-analyst-resume"
 title: "analyst-resume"
 repo: "justin-napolitano/analyst-resume"
 githubUrl: "https://github.com/justin-napolitano/analyst-resume"
-generatedAt: "2025-11-23T08:12:46.615823Z"
+generatedAt: "2025-11-23T08:35:28.313689Z"
 source: "github-auto"
 ---
 
 
-# Building a Custom LaTeX Resume Template: My Journey with `my-resume`
+# analyst-resume: Technical Overview and Implementation Notes
 
-Hey there! I’m Justin Napolitano, and today I want to share a bit about a personal project I’ve been working on: a LaTeX resume template called `my-resume`. If you’re like me, you want your resume to look professional, clean, and tailored to your style — but sometimes existing templates don’t quite fit the bill. That’s where this project comes in.
+## Motivation
 
-## Why I Built `my-resume`
+The analyst-resume project addresses the need for a professional, customizable resume template built on LaTeX. It aims to provide a clean, flexible layout suitable for analysts and professionals who want a polished document without relying on proprietary software. By leveraging XeLaTeX, the project supports advanced typography and multilingual text.
 
-When I was searching for a resume template, I found a lot of great options like AltaCV and AwesomeCV. They’re fantastic, but I needed something that did exactly what I wanted without extra fluff. Plus, I wanted full control over the layout and styling, and to use XeLaTeX for better font and language support.
+## Problem Statement
 
-So I took inspiration from those projects and built my own template from the ground up. It’s designed to be simple yet flexible, letting me customize headers, highlight bars, colors, and page styles easily.
+Creating a resume that balances aesthetics, readability, and customization is challenging. Many templates are either too rigid or require extensive LaTeX knowledge to modify. This project attempts to reduce that barrier by providing a custom LaTeX class and build automation.
 
-## What Problem Does It Solve?
+## Architecture and Components
 
-Resumes are often the first impression you make on a potential employer. Having a clean, well-structured resume that stands out without being over the top is crucial. Many templates are either too basic or too complex, and customizing them can be a pain.
+- **LaTeX Template:** The core is a custom class file (`my-resume.cls`) that defines the resume layout, styles, and color options. The main source `resume.tex` composes the document using this class.
 
-`my-resume` strikes a balance by providing a professional layout that’s easy to tweak. It supports multiple page styles — like having a header and highlight bar on the first page and a simpler layout on subsequent pages. It also supports single-sided or double-sided highlight bars, which helps if you want to print or share your resume in different formats.
+- **Sections:** The `sections/` directory likely contains modular parts of the resume, allowing users to enable or disable sections easily.
 
-## How It’s Built
+- **Images:** Headshots and other images are stored as JPEGs and PNGs, referenced in the LaTeX source.
 
-The core of the project is written in TeX, specifically designed to run on XeLaTeX. This allows me to use modern fonts and handle multilingual text smoothly.
+- **Build Automation:** A Python script (`python-build.py`) automates the build process, invoking `make` commands and running XeLaTeX. This script handles dependency installation, cleaning old builds, compiling, committing, and pushing changes. It uses subprocess calls to run shell commands and prints outputs for logging.
 
-To automate building the resume, I wrote a Python script (`python-build.py`) that runs commands like `make clean` and `make html` to compile the LaTeX source. This script also installs any dependencies needed (though currently minimal) and helps keep the build process smooth.
+- **Makefile:** While the Makefile is not shown, references in the build script and README indicate it supports targets like `clean` and `html` to manage build artifacts and compile the resume.
 
-The project structure is modular, with separate folders for deployment scripts (`deployz`) and sections of the resume (`sections`). The main class file (`my-resume.cls`) encapsulates the styling and layout logic, making it easy to update the look and feel.
+## Implementation Details
 
-## Interesting Implementation Details
+- The Python build script encapsulates build stages in classes (`dependency_pipeline`, `build_pipeline`), each running subprocess commands to install dependencies and compile the document.
 
-- **Highlight Bar Options:** The template supports different highlight bar placements — on the left side for all pages (single-sided) or alternating sides for double-sided printing. This is controlled via options in the class file.
+- The use of XeLaTeX ensures compatibility with modern fonts and Unicode, which is essential for professional documents.
 
-- **Multiple Page Styles:** There are different pagestyles implemented, like a full header with highlight bar on the first page and a simpler style on others, which helps keep the resume clean and readable.
+- The project includes example PDFs (`resume-1.png`, `resume-2.png`, `resume-3.png`, and `technical.pdf`) demonstrating different layout options.
 
-- **Build Automation:** The Python build script uses subprocess calls to run `make` commands and can be extended to include git operations for version control.
+- Log files (`*.log`, `*.aux`, `*.out`) are generated by LaTeX during compilation and are present for debugging purposes.
 
-- **Example PDFs and Images:** The repo includes example pages (`resume-1.png`, `resume-2.png`, `resume-3.png`) demonstrating different layout possibilities, which is great for visualizing how to customize the template.
+## Practical Considerations
 
-## Why this project matters for my career
+- Users need to have XeLaTeX installed; this is non-negotiable for compilation.
 
-Creating `my-resume` was more than just building a resume template — it was about honing my skills in LaTeX, automation, and project structuring. It’s a tangible example of my ability to take inspiration from existing tools and tailor them to my exact needs.
+- Python 3 and Make are optional but recommended for automated builds.
 
-Moreover, having a professional, customizable resume template means I can quickly update and adapt my resume for different opportunities, which is invaluable in a fast-moving job market.
+- The modular section structure allows for easy customization without deep LaTeX expertise.
 
-Lastly, sharing this project publicly shows my commitment to quality and continuous improvement, qualities I value deeply as a developer and analyst.
+- The build script outputs logs to standard output and error streams, facilitating troubleshooting.
 
----
+- The project assumes some deployment process (indicated by the `deployz/` folder), but details are not provided.
 
-Thanks for reading! If you’re interested in LaTeX, resume design, or build automation, feel free to check out the repo and customize it for your own needs. Happy TeXing! 🎉
+## Summary
+
+This project provides a solid foundation for generating professional resumes using LaTeX with automation to simplify the build process. It balances flexibility and usability, making it suitable for technical users who prefer open-source tooling and want control over resume presentation. The modular design and automation scripts reduce friction in maintaining and updating the resume.
+
+When returning to this project, focus on the LaTeX class for styling, the section files for content management, and the Python build script for automation. Understanding these components will enable efficient customization and extension.
