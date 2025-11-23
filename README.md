@@ -1,22 +1,23 @@
-# my-resume
+# analyst-resume
 
-A customizable LaTeX resume/CV template designed to provide a clean, professional layout with flexibility for personal style. Inspired by popular templates like AltaCV and AwesomeCV, this template runs on XeLaTeX and offers multiple page styles and color options.
+A customizable LaTeX resume template designed for clarity, professionalism, and flexibility. This project provides a clean layout powered by XeLaTeX with build automation to streamline resume generation.
 
 ---
 
 ## Features
 
-- Clean and professional resume layout
+- Clean and professional resume layout using LaTeX
 - Multiple page styles with header and highlight bar options
 - Support for single-sided and double-sided highlight bar placement
 - Easily customizable colors and sections
 - Compatible with XeLaTeX for advanced font and language support
-- Includes example PDFs demonstrating layout possibilities
+- Build automation via Python script and Makefile
+- Example PDFs included demonstrating layout options
 
 ## Tech Stack
 
 - **Primary Language:** TeX (LaTeX)
-- **Build Script:** Python (for build automation)
+- **Build Script:** Python
 - **Tools:** XeLaTeX, Makefile
 
 ## Getting Started
@@ -24,12 +25,12 @@ A customizable LaTeX resume/CV template designed to provide a clean, professiona
 ### Prerequisites
 
 - XeLaTeX installed on your system
-- Python 3 (for build automation)
-- Make (optional, for build commands)
+- Python 3
+- Make (optional)
 
 ### Installation
 
-Clone the repository:
+Clone the repository and switch to the default branch:
 
 ```bash
 git clone -b 8rivers https://github.com/justin-napolitano/analyst-resume.git
@@ -38,22 +39,22 @@ cd analyst-resume
 
 ### Build the Resume
 
-You can compile the resume using XeLaTeX directly or use the provided build automation script.
+You can compile the resume manually or use the provided automation.
 
-To compile manually:
+**Manual compilation:**
 
 ```bash
 xelatex resume.tex
 ```
 
-Or use the Makefile commands (if available):
+**Using Makefile:**
 
 ```bash
 make clean
 make html
 ```
 
-Alternatively, run the Python build script:
+**Using Python build script:**
 
 ```bash
 python3 python-build.py
@@ -65,26 +66,23 @@ python3 python-build.py
 analyst-resume/
 ├── deployz/                 # Deployment related files (assumed)
 ├── sections/                # Resume sections as separate files (assumed)
-├── my-resume.cls            # Custom LaTeX class file for the resume
+├── my-resume.cls            # Custom LaTeX class file defining resume styles
 ├── resume.tex               # Main LaTeX source file
-├── resume.pdf               # Compiled resume PDF
-├── python-build.py          # Python script to automate build process
-├── README.md                # This file
-├── LICENSE                  # License file
-├── *.jpeg / *.jpg           # Headshot and pictures used in resume
-├── *.log, *.aux, *.out      # LaTeX compilation auxiliary files
-├── resume-1.png, resume-2.png, resume-3.png  # Example output pages
-└── technical.pdf            # Possibly a technical skills or projects PDF
+├── resume.pdf               # Compiled resume output
+├── python-build.py          # Python script automating build process
+├── README.md                # Project documentation
+├── LICENSE                  # License information
+├── *.jpeg / *.jpg           # Headshot and other images used in resume
+├── *.log, *.aux, *.out      # LaTeX build artifacts
 ```
 
 ## Future Work / Roadmap
 
-- Add detailed documentation on customizing the template
-- Support for additional output formats (e.g., HTML, DOCX)
-- Enhance build automation with error handling and logging
-- Add more example resumes showcasing different styles
-- Integrate continuous integration for automatic PDF builds
+- Expand build automation to support additional output formats
+- Add more customizable templates and color schemes
+- Improve documentation with usage examples and troubleshooting
+- Integrate CI/CD for automated build and deployment
 
 ---
 
-*Note: This README is based on available files and inferred project structure.*
+*Note: Some assumptions on folder contents and deployment details are based on file names and typical LaTeX project structure.*
