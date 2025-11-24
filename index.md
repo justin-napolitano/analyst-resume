@@ -20,6 +20,12 @@ seoSecondaryKeywords:
   - python build script
   - resume automation
 seoOptimized: true
+topicFamily: latex
+topicFamilyConfidence: 0.95
+topicFamilyNotes: >-
+  The post focuses on a LaTeX resume template with modular components and build automation. While
+  automation plays a role, the core subject is LaTeX document preparation and templates, which
+  matches the 'latex' family description and example slugs exactly.
 ---
 
 # analyst-resume: Technical Overview and Implementation Notes
@@ -71,3 +77,4 @@ Creating a resume that balances aesthetics, readability, and customization is ch
 This project provides a solid foundation for generating professional resumes using LaTeX with automation to simplify the build process. It balances flexibility and usability, making it suitable for technical users who prefer open-source tooling and want control over resume presentation. The modular design and automation scripts reduce friction in maintaining and updating the resume.
 
 When returning to this project, focus on the LaTeX class for styling, the section files for content management, and the Python build script for automation. Understanding these components will enable efficient customization and extension.
+
