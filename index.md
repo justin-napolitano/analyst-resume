@@ -1,31 +1,40 @@
 ---
 slug: github-analyst-resume
-title: Customizable LaTeX Resume Template with Build Automation
+title: Customizable LaTeX Resume Template for Analysts
 repo: justin-napolitano/analyst-resume
 githubUrl: https://github.com/justin-napolitano/analyst-resume
 generatedAt: '2025-11-23T08:35:28.313689Z'
 source: github-auto
 summary: >-
-  Technical overview of a modular LaTeX resume template using XeLaTeX and Python automation for
-  flexible professional resume generation.
+  Explore a LaTeX-based resume template designed for analysts, featuring
+  automation and modular customization.
 tags:
   - latex
   - resume-template
   - xelatex
   - python-build
   - automation
+  - resume template
+  - python
+  - build automation
+  - custom class
 seoPrimaryKeyword: latex resume template
 seoSecondaryKeywords:
-  - xelatex
-  - python build script
-  - resume automation
+  - analyst resume
+  - customizable resume
+  - build automation script
+  - XeLaTeX support
+  - modular resume design
 seoOptimized: true
 topicFamily: latex
 topicFamilyConfidence: 0.95
 topicFamilyNotes: >-
-  The post focuses on a LaTeX resume template with modular components and build automation. While
-  automation plays a role, the core subject is LaTeX document preparation and templates, which
-  matches the 'latex' family description and example slugs exactly.
+  The post focuses on a LaTeX resume template with modular components and build
+  automation. While automation plays a role, the core subject is LaTeX document
+  preparation and templates, which matches the 'latex' family description and
+  example slugs exactly.
+kind: project
+id: github-analyst-resume
 ---
 
 # analyst-resume: Technical Overview and Implementation Notes
