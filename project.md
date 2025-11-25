@@ -1,19 +1,28 @@
 ---
 slug: github-analyst-resume
 id: github-analyst-resume
-title: analyst-resume
+title: Customizable LaTeX Resume Template with Automation
 repo: justin-napolitano/analyst-resume
 githubUrl: https://github.com/justin-napolitano/analyst-resume
 generatedAt: '2025-11-24T21:33:56.019Z'
 source: github-auto
 summary: >-
-  A customizable LaTeX resume template designed for clarity, professionalism,
-  and flexibility. This project provides a clean layout powered by XeLaTeX with
-  build automation to streamline resume generation.
-tags: []
-seoPrimaryKeyword: ''
-seoSecondaryKeywords: []
-seoOptimized: false
+  A LaTeX resume template featuring build automation, customizable layouts, and
+  support for XeLaTeX to streamline resume generation.
+tags:
+  - latex
+  - xelatex
+  - python
+  - makefile
+  - automation
+seoPrimaryKeyword: customizable latex resume template
+seoSecondaryKeywords:
+  - build automation
+  - resume generation
+  - python script
+  - makefile usage
+  - xeLatex features
+seoOptimized: true
 topicFamily: null
 topicFamilyConfidence: null
 kind: project
