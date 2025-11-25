@@ -7,8 +7,8 @@ githubUrl: https://github.com/justin-napolitano/analyst-resume
 generatedAt: '2025-11-24T21:33:56.019Z'
 source: github-auto
 summary: >-
-  A LaTeX resume template featuring build automation and customizable layouts
-  for professional presentation.
+  A LaTeX resume template featuring build automation and customizable layouts for professional
+  presentation.
 tags:
   - latex
   - xelatex
@@ -24,8 +24,8 @@ seoSecondaryKeywords:
   - Python build script
   - Makefile resume
 seoOptimized: true
-topicFamily: null
-topicFamilyConfidence: null
+topicFamily: latex
+topicFamilyConfidence: 0.9
 kind: project
 entryLayout: project
 showInProjects: true
@@ -120,3 +120,4 @@ analyst-resume/
 ---
 
 *Note: Some assumptions on folder contents and deployment details are based on file names and typical LaTeX project structure.*
+
